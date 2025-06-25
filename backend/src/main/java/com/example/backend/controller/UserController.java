@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 
-@RestController
 @CrossOrigin
+@RestController
 public class UserController {
     
     @Autowired
@@ -27,7 +27,7 @@ public class UserController {
         return ser.registerUser(u);
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public User getMethodName(@RequestBody User u) {
         return ser.Login(u);
     }

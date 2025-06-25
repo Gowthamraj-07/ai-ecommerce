@@ -1,0 +1,14 @@
+.navbar{
+    background-color: bisque;
+    padding: 20px;
+   display: flex;
+   justify-content: space-between;
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+.nav-links li{
+    text-decoration: none;
+    list-style: none;
+}
