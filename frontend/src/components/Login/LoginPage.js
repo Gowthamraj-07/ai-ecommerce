@@ -22,7 +22,7 @@ export default function () {
                 alert("Invalid Email or password!");
                 return;
             }
-            localStorage.setItem("user",JSON.stringify(user))
+            localStorage.setItem("user",JSON.stringify(data))
             setUserdetails(data)
             alert("Login Succesful")
             console.log(data)

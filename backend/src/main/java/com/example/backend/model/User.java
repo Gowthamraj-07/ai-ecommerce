@@ -1,9 +1,12 @@
 package com.example.backend.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class User {
@@ -13,15 +16,30 @@ public class User {
     String username;
     String email;
     String password;
+    @OneToMany
+    List<CartItem>cartItems;
     public User(){
 
     }
-    public User(Long id, String username, String email, String password) {
+    
+   
+    public User(Long id, String username, String email, String password, List<CartItem> cartItems) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
+        this.cartItems = cartItems;
     }
+
+
+    public List<CartItem> getCartItems() {
+        return cartItems;
+    }
+
+    public void setCartItems(List<CartItem> cartItems) {
+        this.cartItems = cartItems;
+    }
+
     public Long getId() {
         return id;
     }
